@@ -6,10 +6,10 @@ from django.shortcuts import get_object_or_404
 def passcard_info_view(request, passcode):
     """Отображаем все визиты человека в хранилище."""
     passcard = get_object_or_404(Passcard, passcode=passcode)
-    visits = Visit.objects.filter(passcard=passcard)
+    all_visits = Visit.objects.filter(passcard=passcard)
     this_passcard_visits = []
 
-    for visit in visits:
+    for visit in all_visits:
         this_passcard_visits += [
             {
                 'entered_at': visit.entered_at,
