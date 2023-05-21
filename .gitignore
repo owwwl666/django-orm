@@ -154,3 +154,4 @@ cython_debug/
 #.idea/django-orm.iml
 #.idea/misc.xml
 #.idea/modules.xml
+.idea/
