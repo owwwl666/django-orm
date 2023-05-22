@@ -7,11 +7,11 @@ env.read_env()
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'HOST': 'checkpoint.devman.org',
-        'PORT': '5434',
+        'HOST': env("HOST_DB"),
+        'PORT': env("PORT_DB"),
         'NAME': env("NAME_DB"),
-        'USER': env('USER_DB'),
-        'PASSWORD': env('PASSWORD_DB'),
+        'USER': env("USER_DB"),
+        'PASSWORD': env("PASSWORD_DB"),
     }
 }
 
